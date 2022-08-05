@@ -13,9 +13,9 @@ function App() {
     <CartProvider>
     <NavBar />
       <Routes>
+        <Route path="/shop2" element={<Product/>} />
         <Route exact path="/product/:id" element={<DescProduct/>}/>
         <Route exact path="/cart" element={<Cart/>} /> 
-        <Route path="/shop2" element={<Product/>} />
       </Routes>
     </CartProvider>
     </div>

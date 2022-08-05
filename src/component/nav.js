@@ -1,15 +1,22 @@
 import React from "react";
-import { FaShoppingCart } from "react-icons/fa";
+import { FiShoppingCart } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
+import { useCart } from "react-use-cart";
+
 const NavBar = () => {
- return(
+  const { totalItems } = useCart();
+  return (
     <div className="Nav_bar">
-    <NavLink to={"/"} className="Logo"> My Shop</NavLink>
-    <NavLink to={"/cart"} className="giohang">
-            <FaShoppingCart className="Nav_bar_icon"/>
-        </NavLink>
+      <NavLink to={"/shop2"} className="Logo">
+        <img alt="logo outfiz" src="./logo.png"></img>
+      </NavLink>
+      <NavLink to={"/cart"} className="giohang">
+        <FiShoppingCart className="Nav_bar_icon" />
+        <div className="Nav_bar_icon_number">
+          <span>{totalItems}</span>
+        </div>
+      </NavLink>
     </div>
-    
- )
-}
+  );
+};
 export default NavBar;
