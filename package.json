@@ -15,7 +15,7 @@
     "react-use-cart": "^1.13.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://loi17072001.github.io/shop2",  
+  "homepage": "https://loi17072001.github.io/shop2",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
